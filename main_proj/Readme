@@ -1,0 +1,46 @@
+DETECTION OF CARDIOVASCULAR DISEASE IN ECG IMAGES USING MACHINE LEARNING AND DEEP LEARNING
+-> things need to know.
+    ->what is ECG and how ECG is used to compute the Heart disease 
+    ->what is machine learning and deep learning
+    ->how machine learning and deep learning is used in ECG images
+    ->what is LSTM and how its working 
+
+ECG or EKG
+    ->ECG, short for Electrocardiogram (also known as EKG from the German "Elektrokardiogramm"), 
+    is a medical test that records the electrical activity of the Heart over a period of time.
+    ->A current which makes the Heart to beat is known as ActionPotential, a system which produce 
+    ActionPotential is known as conduction system of the Heart.
+    
+    ->Conduction System Of The Heart
+        ->Consists of 4 parts
+            ->SA node(sinoartrial node) -> Natural Pace Maker (produces Electrical Impulse)
+            ->AV node(atrialventricular node)
+            ->bundle of his
+            ->purkinjee fibre
+
+        travelling the pulse from AV node to bundle of his takes the delay of -0.16seconds because
+        of diminished gap junction.
+
+        Relaxation { <- SA <-> AV <-> bundle of his <-> purkinjee fibre -> } Contraction
+
+    -> ECG
+        mainly to measure the ecg records we need 12 leads,
+            among these 12, 6 for limb leads and another 6 for chest limbs
+            ->limb leads
+                Right arm
+                Left arm
+                Left leg
+            ->chest leads
+                V1
+                V2
+                V3
+                V4
+                V5
+                V6
+        gel used to paste these leads are silverchloride(AgCl), bcoz less resistance which gives
+        more accurate results.
+        ->ECG signal is a time series signal, which is a signal that varies with time.
+        ->ECG signal is a periodic signal, which is a signal that repeats itself after a certain
+        period of time.
+
+        
