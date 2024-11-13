@@ -1,11 +1,10 @@
 DETECTION OF CARDIOVASCULAR DISEASE IN ECG IMAGES USING MACHINE LEARNING AND DEEP LEARNING
 -> things need to know.
     ->what is ECG and how ECG is used to compute the Heart disease 
-    ->what is machine learning and deep learning
-    ->how machine learning and deep learning is used in ECG images
+    ->what dataset used for this project
     ->what is LSTM and how its working 
 
-ECG or EKG
+1. ECG or EKG
     ->ECG, short for Electrocardiogram (also known as EKG from the German "Elektrokardiogramm"), 
     is a medical test that records the electrical activity of the Heart over a period of time.
     ->A current which makes the Heart to beat is known as ActionPotential, a system which produce 
@@ -43,4 +42,78 @@ ECG or EKG
         ->ECG signal is a periodic signal, which is a signal that repeats itself after a certain
         period of time.
 
+1.1 how ECG used to compute heart disease
+    -> ECG, a test that measures the electtrical activity of the heart over a period of time.
+
+    After these analyses we came into 5 things
+    -> Analysis
+    -> Rhythm Detection
+    -> Waveform Patterns
+    -> Interval Analysis
+    -> Detection of Condition
+
+    1.1.1 Analysis
+            measure the rate of heartbeats per minute.Abnormalities like bradycardia (too slow) or 
+         tachycardia (too fast) can be early indicators of underlying conditions.
+    1.1.2 Rhythm Detection
+            show the rhythm of heartbeats. Irregular rhythms, known as arrhythmias, can indicate 
+        conditions like atrial fibrillation or ventricular fibrillation
+    1.1.3 Waveform Detection
+            ->P wave: Represents the atrial depolarization. Abnormalities in the P wave can suggest atrial enlargement.
+            ->QRS complex: Reflects the ventricular depolarization. Wide QRS complexes can indicate ventricular 
+        hypertrophy or blockages.
+            ->T wave: Represents ventricular repolarization. Abnormal T waves might suggest ischemia or electrolyte imbalances.
+            ->ST Segment: Elevation or depression in the ST segment can indicate myocardial infarction (heart attack) 
+        or ischemia (reduced blood flow to the heart).
+    1.1.4 Interval Analysis
+            different waves (e.g., PR, QRS, and QT intervals) provide insight into how effectively the heart’s 
+        electrical system is functioning. For example, a prolonged QT interval is associated with a higher risk of arrhythmias.
+    1.1.5 Detection of Condition
+            with help from these analysis we got to know the specific condition of the heart.
+
+2. Dataset used.
+    PTB-XL ECG Dataset (PhysioNet)
+        ->This dataset is an extension of the PTB database, containing over 20,000 ECG records from clinical settings, 
+    labeled with diagnostic information, including cardiovascular conditions.
+        ->Data Type: High-quality 12-lead ECGs annotated with disease classes, suitable for 
+    machine learning and deep learning.
         
+        PTB-XL ECG Dataset: "https://physionet.org/content/ptb-xl/1.0.3/" a direct link to the page.
+
+        The PTB-XL ECG dataset is a large dataset of 21799 clinical 12-lead ECGs from 18869 patients of 10 second length.
+    The raw waveform data was annotated by up to two cardiologists, who assigned potentially multiple ECG statements to each record. 
+    The in total 71 different ECG statements conform to the SCP-ECG standard and cover diagnostic, form, and rhythm statements. 
+    To ensure comparability of machine learning algorithms trained on the dataset, we provide recommended splits into training 
+    and test sets. In combination with the extensive annotation, this turns the dataset into a rich resource for the training and 
+    the evaluation of automatic ECG interpretation algorithms. The dataset is complemented by extensive metadata on demographics, 
+    infarction characteristics, likelihoods for diagnostic ECG statements as well as annotated signal properties.
+
+3. LSTM.
+    Define:
+        ->LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN).
+        ->It is widely used in tasks that involve sequential data, such as time series analysis, speech recognition, 
+    and ECG signal processing.
+
+    How it works:
+        ->LSTM is composed of memory cells that allow it to remember information over long periods of time.
+    achieves this through its internal gating mechanism, which consists of three main gates:
+            ->Forget Gate: Determines what information from the previous time step should be discarded (i.e., forgotten).
+            ->Input Gate: Decides which new information should be added to the memory.
+            ->Output Gate: Determines what information from the memory should be outputted for the current time step.
+
+    LSTM in ECG Detection
+        ->In ECG signal analysis, the data consists of time-series sequences of voltage measurements from the heart's 
+    electrical activity,can be particularly effective for ECG detection because:
+
+            ->Sequential Data Handling: ECG data is naturally sequential, with each heartbeat generating a new time 
+    step of data. LSTM can learn the temporal dependencies between these time steps and capture complex patterns such as 
+    changes in heart rate or abnormal rhythms.
+
+            ->Learning Patterns in Heart Activity: An LSTM model can learn to detect normal and abnormal patterns in 
+    ECG signals. For example, it can differentiate between regular sinus rhythms and arrhythmias (like atrial fibrillation or 
+    ventricular fibrillation). The model can also detect irregularities such as heart blocks, ST-segment elevation, or other signs 
+    of myocardial infarction.
+
+
+
+
