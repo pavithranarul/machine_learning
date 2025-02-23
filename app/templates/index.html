@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soil Classification</title>
+</head>
+<body>
+    <h1>Upload a Soil Image</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if soil %}
+        <h2>Predicted Soil Type: {{ soil }}</h2>
+        <h3>Recommended Crops: {{ crops }}</h3>
+        <h3>Non-toxic Fertilizers:</h3>
+        <ul>
+            {% for crop, fertilizers in fertilizers.items() %}
+                <li>{{ crop }}: {{ ", ".join(fertilizers) }}</li>
+            {% endfor %}
+        </ul>
+        <img src="{{ image_path }}" width="200">
+    {% endif %}
+</body>
+</html>
